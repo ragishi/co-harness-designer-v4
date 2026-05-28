@@ -62,6 +62,11 @@ card task_001 "{task_title}"
 
 ## 関連 contract
 
-- `../../../../../02_contracts/40_surface_contract.md`
-- `../../../../../02_contracts/20_workflow_contract.md`
-- `../../../../../03_status_metrics/10_workflow_status.md`
+scaffold 内では深い相対パスを避け、ID 参照 + V4 source pointer を使う。target repo へコピーされた後でも誤解しないため。
+
+| contract / metric | V4 source |
+| --- | --- |
+| `contract.surface.v1` | `co-harness-designer-v4/02_contracts/40_surface_contract.md` |
+| `contract.workflow.v1` | `co-harness-designer-v4/02_contracts/20_workflow_contract.md` |
+| `semantic.workflow_status.v1` | `co-harness-designer-v4/03_status_metrics/10_workflow_status.md` |
+| `contract.mnp_surface.v1`（MNP block を使う場合） | `co-harness-designer-v4/02_contracts/80_mnp_surface_contract.md` |

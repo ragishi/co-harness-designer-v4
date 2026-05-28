@@ -12,7 +12,7 @@ V4 が**どんな Repo を作るか**を定義する。
 - Common Core 定義（全 archetype 共通）
 - Optional Modules 一覧
 - 新 archetype 作成テンプレ（`_new_archetype_template/`）
-- 8 archetype の repo 定義（`repo/`）— MVP では 2 つだけ
+- **設計上 archetype 候補は 8 つ。MVP では `note_production_repo` と `client_repo` の 2 つだけ実体化。残り 6 つは後段**
 - workflow archetype（`workflows/`）— MVP では空（後段）
 
 ## 2. このrootが持たないもの
@@ -35,7 +35,7 @@ V4 が**どんな Repo を作るか**を定義する。
 | `repo/README.md` | repo archetype の入口 | ✓ |
 | `repo/note_production_repo.md` | note 制作 archetype | ✓ |
 | `repo/client_repo.md` | client 案件 archetype | ✓ |
-| `repo/{7 others}.md` | 残り 7 archetype | — 後段 |
+| `repo/{6 others}.md` | 残り 6 archetype: project_progress / sns_operations / youtube_ops / workflow_ops / prompt / design_system | — 後段 |
 | `workflows/` | workflow archetype | — 後段 |
 
 MVP では note と client の 2 archetype のみ。残りは使いながら追加。

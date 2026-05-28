@@ -18,22 +18,24 @@ V4 が産む全 target repo が **最低限持つもの** を定義する。
 
 ---
 
-## Common Core（全 target repo が必ず持つ root）
+## Common Core（全 target repo が必ず持つ 9 entries）
+
+**Common Core は 9 entries = 2 root files + 7 root directories** で構成される。「9 root」と書かない（README.md / SPOKE.yml は root file であり root ではない）。
 
 ```text
 {target-repo}/
-├── README.md
-├── SPOKE.yml
-├── 00_foundation/
-├── 20_workspace/
-├── 21_outputs/
-├── 30_feedback/
-├── 31_learning/
-├── 90_archive/
-└── .companyos/
+├── README.md             # ← root file (1)
+├── SPOKE.yml             # ← root file (2)
+├── 00_foundation/        # ← root directory (3)
+├── 20_workspace/         # ← root directory (4)
+├── 21_outputs/           # ← root directory (5)
+├── 30_feedback/          # ← root directory (6)
+├── 31_learning/          # ← root directory (7)
+├── 90_archive/           # ← root directory (8)
+└── .companyos/           # ← root directory (9)
 ```
 
-archetype 固有の root（`01_meaning_model/` や `02_contracts/` 相当）は V4 から伝播される blueprint で決まる。target は **必ず Common Core を持つ**。
+archetype 固有の root（`01_meaning_model/` や `02_contracts/` 相当）は V4 から伝播される blueprint で決まる。target は **必ず Common Core 9 entries を持つ**。
 
 ## 必須 root files
 
@@ -92,7 +94,7 @@ mvp_archetypes:
 
 ## 最低 acceptance
 
-- Common Core 9 root（README / SPOKE.yml / 8 root）すべて存在
+- Common Core **9 entries**（root files 2 + root directories 7）すべて存在
 - SPOKE.yml に 6 必須項目すべてあり
 - `.companyos/` の 4 sub-dir（surfaces / sync / generated）+ manifest が存在
 - `.companyos/README.md` に「接続口であり正本ではない」明記
@@ -100,7 +102,7 @@ mvp_archetypes:
 
 ## 止める条件
 
-- Common Core の root が欠けている
+- Common Core 9 entries のいずれかが欠けている
 - `.companyos/` に業務正本がコピーされている
 - SPOKE.yml が JSON で書かれている
 - `.companyos/manifest.md`（Markdown 正本）が欠けている

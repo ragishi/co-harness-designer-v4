@@ -55,9 +55,19 @@ generated_path : [source_pin_1, source_pin_2, ...]
 - source_pin に業務正本本体がコピーされた
 - source_pin が壊れたまま運用継続している
 
-## 関連ファイル
+## 関連ファイル / contract
+
+scaffold 内では深い相対パスを避け、ID 参照 + V4 source pointer を使う。
+
+**同 scaffold 内（target にコピーされた後も有効）:**
 
 - `freshness.md` — pin の鮮度
 - `generated_from.md` — 生成履歴
 - `../manifest.md`
-- `../../../../../02_contracts/40_surface_contract.md`
+
+**V4 contract 参照:**
+
+| contract | V4 source |
+| --- | --- |
+| `contract.surface.v1` | `co-harness-designer-v4/02_contracts/40_surface_contract.md` |
+| `contract.sync.v1`（planned） | `co-harness-designer-v4/02_contracts/50_sync_contract.md` |

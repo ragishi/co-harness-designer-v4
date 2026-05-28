@@ -48,13 +48,16 @@ Q5: 運用粒度内か？（過度な細分化でないか）
 
 ## 6-step Migration Package（L0 / L1 を動かす場合）
 
+V4 の `31_learning/` は `signals/ → patterns/ → candidates/ → accepted/ or rejected/` の昇格段構造。Migration package もこの流れを通す。
+
 ```text
-1. 提案を 31_learning/04_emerging_patterns.md に起草する
-2. 3 ヶ月安定運用 + 5 回再発を確認する
-3. governance review + DRR 5 質問を通す
-4. 4-AND 昇格門を pass する
-5. improvement card で human 6 択判断を受ける
-6. core layer に統合する（= migration package として）
+0. 観察を 30_feedback/raw/{YYYY-MM}.md に append（前提）
+1. 再発兆候を 31_learning/signals/ に登録
+2. 抽象化パターンを 31_learning/patterns/ に整理
+3. 提案を 31_learning/candidates/{migration_id}.md に起草する
+4. 3 ヶ月安定運用 + 5 回再発を確認する
+5. governance review + DRR 5 質問 + 4-AND 昇格門を pass する
+6. improvement card で human 6 択判断を受け、accepted へ移動 → core layer に統合する（= migration package として）
 ```
 
 簡略版（V4 MVP 初期）：

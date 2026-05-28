@@ -66,5 +66,10 @@ card repo "{repo_name}"
 
 ## 関連 contract
 
-- `../../../../../02_contracts/40_surface_contract.md`
-- `../../../../../02_contracts/80_mnp_surface_contract.md`（MNP block を使う場合）
+scaffold 内では深い相対パスを避け、ID 参照 + V4 source pointer を使う。target repo へコピーされた後でも誤解しないため。
+
+| contract / metric | V4 source |
+| --- | --- |
+| `contract.surface.v1` | `co-harness-designer-v4/02_contracts/40_surface_contract.md` |
+| `contract.mnp_surface.v1` | `co-harness-designer-v4/02_contracts/80_mnp_surface_contract.md` |
+| `contract.markdown.v1` | `co-harness-designer-v4/02_contracts/70_markdown_contract.md` |
