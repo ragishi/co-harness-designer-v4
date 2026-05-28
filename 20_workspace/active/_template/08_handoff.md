@@ -54,7 +54,7 @@ slug: "{YYYY-MM-{slug}}"
 
 ## 完了の判定基準
 
-- [ ] target repo の Common Core 9 root すべて作成
+- [ ] target repo の Common Core 9 entries すべて作成
 - [ ] `.companyos/` 必須要素すべて存在
 - [ ] CLAUDE.gate.md の Critical Gate すべて pass
 - [ ] target repo の SPOKE.yml に必須項目すべて記載

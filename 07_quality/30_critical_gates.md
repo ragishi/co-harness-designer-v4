@@ -31,7 +31,7 @@ V3 の Critical Gate 思想を継承。
 | **Markdown-first Gate** | 正本が Markdown で読めない（YAML / JSON のみで意味定義） |
 | **Source Pin Gate** | generated 物の元が追えない |
 | **Contract Gate** | 必須 contract が欠けている（repo_contract / surface_contract / markdown_contract） |
-| **Common Core Gate** | target repo の Common Core 9 root のいずれかが欠けている |
+| **Common Core Gate** | target repo の Common Core 9 entries のいずれかが欠けている |
 | **`.companyos/` not Canonical Gate** | `.companyos/` 内に業務正本がコピーされている |
 | **Generated not Canonical Gate** | `generated/` 配下が手動編集されている |
 | **DRR Gate** | 新規 root / 新規 contract / 新規 archetype が DRR 5 質問を通らず追加された |

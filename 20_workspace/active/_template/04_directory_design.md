@@ -60,7 +60,7 @@ target repo の **ディレクトリツリー** を確定する。
 
 ## 最低 acceptance
 
-- Common Core 9 root すべて
+- Common Core 9 entries すべて
 - archetype 固有 root が必要分のみ
 - DRR 5 質問通過
 
