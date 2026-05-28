@@ -25,6 +25,54 @@ handoff_to: Phase 3 実装者（人間 / AI）
 
 ---
 
+## Phase 3 実行条件（AI への絶対ルール）
+
+> **AI への警告**: このファイルを読んだだけで Phase 3 を開始してはいけない。
+> このゲートはサマリ・実装手順より**前**に配置されている — 実装文脈を読み込む**前**にここで止まること。
+
+この handoff は Phase 3 実装者向けの指示書である。ただし、AI が「自然な次の一手」として勝手に Phase 3 を開始すると、**V4 とは別の repo (`co-note-production`) を編集することになる**。これは事故の典型パターン。
+
+### Phase 3 を開始してよい条件
+
+ユーザーが **明示的に target repo 適用を依頼した場合のみ**：
+
+| 種別 | 例 |
+| --- | --- |
+| ◎ 明示承認（Phase 3 OK） | 「co-note-production に .companyos interface を適用して」 |
+| ◎ 明示承認（Phase 3 OK） | 「Phase 3 として co-note-production 側を実装して」 |
+| ◎ 明示承認（Phase 3 OK） | 「target repo への適用を開始して」 |
+| ◎ 明示承認（Phase 3 OK） | 「note-production-pilot を実行して」 |
+| ◎ 明示承認（Phase 3 OK） | 「.companyos/ を co-note-production に scaffolding して」 |
+| × 不十分な指示（Phase 3 NG） | 「続きを進めて」 |
+| × 不十分な指示（Phase 3 NG） | 「次の作業をして」 |
+| × 不十分な指示（Phase 3 NG） | 「進めてください」 |
+| × 不十分な指示（Phase 3 NG） | 「OK」「了解」「お願いします」 |
+| × 不十分な指示（Phase 3 NG） | 「先に進めて」「やって」 |
+| × 不十分な指示（Phase 3 NG） | 「Step 0.5 だけやって」など部分指示 |
+
+### 不十分な指示しかない場合の AI の行動
+
+V4 (this repo) 内のレビュー / 設計更新 / feedback 整理 / その他 V4 内部作業に留める。
+
+**target repo を勝手に編集する事故より、V4 内で何もしない方が圧倒的に安全**。
+
+### AI が判断に迷ったら
+
+迷ったら **V4 内に留まる方を選ぶ**。
+
+それでも確認が必要な場合は、ユーザーに以下のように聞く：
+
+> 「これは V4 内部の作業ですか？それとも co-note-production へ Phase 3 を適用する作業ですか？」
+
+### 関連 gate
+
+- `../../../CLAUDE.md` Absolute Rule 9 — V4 原則レベルの最初のゲート
+- `../../../CLAUDE.gate.md` Stop Conditions の **「Phase 3 target repo application is being started without explicit user approval」** — V4 完了前検査
+- このセクション — handoff レベルの正本（最も詳細）
+- `../README.md` の AI への絶対ルール — pilot folder 入口
+
+---
+
 ## サマリ（00-07 を 1 ページに圧縮）
 
 ### 何をするか（00, 01）
@@ -67,7 +115,8 @@ handoff_to: Phase 3 実装者（人間 / AI）
 
 ## Phase 3 実装手順（step-by-step）
 
-> **重要**: 本 pilot 設計の Phase 3 適用は、V4 とは**別の作業セッション / 別の repo (`co-note-production`)** で実施する。
+> **重要**: 冒頭の「Phase 3 実行条件」を満たすユーザー明示承認が出た**後**に、以下を実行する。
+> 本 pilot 設計の Phase 3 適用は、V4 とは**別の作業セッション / 別の repo (`co-note-production`)** で実施する。
 > 以下は実装者（人間 / AI）が `co-note-production` で行う作業の指示書。
 
 ### Step 0: 前提確認
@@ -175,6 +224,23 @@ git checkout -b feat/companyos-interface-scaffold
 V4 の `06_build/scaffolds/companyos_interface/` を `co-note-production/.companyos/` にコピーする。
 
 > **環境前提**: 以下のコマンドは `co-harness-designer-v4` と `co-note-production` が **同一親 directory に sibling として存在する** ことを前提とする（例: 両方とも `/Users/saku/` 直下）。パスは実環境に合わせて調整すること。
+
+#### 2-0: copy 前の dry-run / tree 確認（必須）
+
+cp コマンドを叩く前に、コピー元の中身とコピー先の不在を **両方確認** する：
+
+```text
+# コピー元の中身を確認（雛形 file が全て存在するか）
+ls -la co-harness-designer-v4/06_build/scaffolds/companyos_interface/
+find co-harness-designer-v4/06_build/scaffolds/companyos_interface/ -type f
+
+# コピー先が未存在であることを再確認（Step 0.5 で確認済みでも再 check）
+test ! -e co-note-production/.companyos && echo "OK: copy 先未存在" || echo "STOP: copy 先既存"
+```
+
+`.companyos/` が **既に存在する**場合は cp を**実行しない**。Step 0.5 の判定に戻る（既存上書きは禁止）。
+
+#### 2-1: 実 copy
 
 ```text
 cp -R co-harness-designer-v4/06_build/scaffolds/companyos_interface/ \
@@ -289,7 +355,13 @@ harness_designer_v4:
 | block 内の値が手順と異なる | 修正、再 diff 確認 |
 | `applied_at` が空 / 過去日 | 実適用日に修正 |
 
-### Step 5: Critical Gates 自己 check
+### Step 5: Critical Gates 自己 check（短縮チェック）
+
+> **重要**: 以下は **短縮チェック**であり、正式な合格判定の正本は：
+> - `../07_quality_plan.md` の **acceptance criteria 10/10**（本 pilot 専用の合格基準）
+> - `../../../07_quality/30_critical_gates.md` の **全 critical gates** （V4 共通正本）
+>
+> 短縮チェックだけで合格判定しないこと。両正本との照合が完了して初めて Step 6 へ進む。
 
 `co-harness-designer-v4/07_quality/30_critical_gates.md` の項目を全て確認：
 

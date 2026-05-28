@@ -53,6 +53,17 @@ Stop and ask for review if:
 - v3 (`co-harness-design-v3`) is being modified
 - a new archetype is being added without going through `04_archetypes/_new_archetype_template/`
 - an `installed/` extension is being added without admission criteria check
+- **Phase 3 target repo application is being started without explicit user approval**
+  - 「続きを進めて」「次へ」「OK」「進めてください」だけでは Phase 3 へ進まない
+  - V4 (this repo) 内のレビュー / 設計更新 / feedback 整理に留める
+  - 明示承認の例（Phase 3 OK、最小例示）:
+    1. 「co-note-production に .companyos interface を適用して」
+    2. 「Phase 3 として co-note-production 側を実装して」
+    3. 「target repo への適用を開始して」
+    4. 「note-production-pilot を実行して」
+    5. 「.companyos/ を co-note-production に scaffolding して」
+  - **完全版・対比表・不十分指示の例 / 迷ったときの行動規範**は `20_workspace/active/2026-05-note-production-pilot/08_handoff.md` の **「Phase 3 実行条件」** section を必ず参照（このゲートの正本）
+  - 迷ったら V4 内に留まる。target repo を勝手に編集する事故より、V4 内で何もしない方が圧倒的に安全
 
 ---
 
