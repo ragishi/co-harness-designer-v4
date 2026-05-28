@@ -159,7 +159,7 @@ CLAUDE.gate.md:
 ### MVP で作らないもの（明示）
 
 ```text
-× 残りの archetype（note と client 以外の 7 種）
+× 残りの archetype（note と client 以外の 6 つ：project_progress / sns_operations / youtube_ops / workflow_ops / prompt / design_system）
 × 残り exporter（mnp_surface 以外）
 × JSON 生成パイプライン
 × writeback contract の詳細実装
