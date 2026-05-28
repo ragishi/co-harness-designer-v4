@@ -1,0 +1,51 @@
+# manifest.yml.example — .companyos/ manifest の YAML 版（雛形）
+#
+# このファイルは雛形。target repo にコピーして `manifest.yml` にリネームし、
+# 自分の repo の値で埋める。これ自体は正本ではない（manifest.md が Markdown 正本）。
+
+# -----------------------------------------------------------------------------
+# target repo identity
+# -----------------------------------------------------------------------------
+spoke_id: "{target_repo_name}"           # 例: spoke.note-production
+archetype: "{one_of_v4_archetypes}"      # 例: archetype.note_production_repo.v1
+version: "{semver_or_baseline}"          # 例: stable-baseline-v4-mvp
+description: "{1-line summary}"
+
+# -----------------------------------------------------------------------------
+# hub connection
+# -----------------------------------------------------------------------------
+hub: company-os
+mode: attached                            # attached | standalone | degraded | reattach_required
+
+# -----------------------------------------------------------------------------
+# exposed surfaces
+# -----------------------------------------------------------------------------
+surfaces:
+  - id: surface.repo_card.v1
+    file: surfaces/repo_card.surface.md
+    role: CompanyOS で repo を表すカード
+  - id: surface.workflow_lens.v1
+    file: surfaces/workflow_lens.surface.md
+    role: workflow の進行状態
+  - id: surface.member_work_lens.v1
+    file: surfaces/member_work_lens.surface.md
+    role: メンバー視点の作業
+
+# -----------------------------------------------------------------------------
+# visibility
+# -----------------------------------------------------------------------------
+visibility:
+  expose:
+    - status
+    - meta
+    - source_pin
+  do_not_expose:
+    - business_canonical
+    - confidential
+
+# -----------------------------------------------------------------------------
+# generated
+# -----------------------------------------------------------------------------
+generated:
+  policy: build_pipeline_only             # 手動編集禁止
+  location: generated/

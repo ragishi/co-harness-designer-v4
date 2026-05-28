@@ -1,0 +1,105 @@
+# SPOKE.yml — co-harness-designer-v4 接続契約
+
+spoke_id: co-harness-designer-v4
+version: stable-baseline-v4-mvp
+description: "CompanyOS に接続できる目的別 Repo を Markdown-first で設計・生成・検証・改善する Repository Harness Factory"
+
+# -----------------------------------------------------------------------------
+# Predecessor relationship
+# -----------------------------------------------------------------------------
+predecessor:
+  repo: co-harness-design-v3
+  status: successor_created_not_archived
+  successor_created_at: 2026-05-28
+  reason: "v4 archetype + semantic + projection architecture (16-root)"
+  legacy_pointer: 90_archive/99_legacy_v3_pointer.md
+
+# -----------------------------------------------------------------------------
+# Hub connection
+# -----------------------------------------------------------------------------
+connection:
+  hub: company-os
+  mode: attached
+  binding_method: spoke_yml_v2
+
+# -----------------------------------------------------------------------------
+# Capabilities
+# -----------------------------------------------------------------------------
+capabilities:
+  primary:
+    - repository_harness_factory
+    - target_repo_archetype_production
+    - companyos_projection_design
+  functions:
+    - design
+    - scaffold
+    - export
+    - review
+    - improve
+
+# -----------------------------------------------------------------------------
+# Archetype
+# -----------------------------------------------------------------------------
+archetype: connected_capability
+archetype_rationale: |
+  company-os hub と接続し、目的別 target repo (note / client / SNS / YouTube / project / workflow)
+  を産む Repository Harness Factory。各 target repo に共通の SSOT 構造と .companyos/ interface を伝播する。
+
+# -----------------------------------------------------------------------------
+# Structure
+# -----------------------------------------------------------------------------
+structure:
+  root_entries: 16
+  layers:
+    - "00_foundation"
+    - "01_meaning_model"
+    - "02_contracts"
+    - "03_status_metrics"
+    - "04_archetypes"
+    - "05_read_sets"
+    - "06_build"
+    - "07_quality"
+    - "10_references"
+    - "11_connect"
+    - "20_workspace"
+    - "21_outputs"
+    - "30_feedback"
+    - "31_learning"
+    - "40_extensions"
+    - "90_archive"
+  hidden:
+    - ".claude"
+    - ".codex"
+    - ".github"
+  permanence_levels: [L0, L1, L2, L3, L4]
+
+# -----------------------------------------------------------------------------
+# Quality baseline
+# -----------------------------------------------------------------------------
+quality_baseline: stable-baseline-v4-mvp
+mvp_scope: true
+
+# -----------------------------------------------------------------------------
+# Absolute rules (= 全実装で必ず守る)
+# -----------------------------------------------------------------------------
+absolute_rules:
+  - markdown_is_canonical
+  - ui_is_not_ssot
+  - json_is_generated_cache_only
+  - yaml_is_minimal
+  - feedback_and_learning_are_separated
+  - mnp_is_surface_optional_extension_only
+
+# -----------------------------------------------------------------------------
+# MVP archetypes (= 初期検証対象)
+# -----------------------------------------------------------------------------
+mvp_archetypes:
+  - note_production_repo
+  - client_repo
+
+# -----------------------------------------------------------------------------
+# Published metadata
+# -----------------------------------------------------------------------------
+published_at: 2026-05-28
+maintainer: ragishi
+visibility: public
