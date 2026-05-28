@@ -2,6 +2,9 @@
 
 Before completing any implementation in this repo, run this checklist against your changes.
 
+> **このファイルは実行時の短縮版 checklist。**
+> Critical Gate の詳細正本は [`07_quality/30_critical_gates.md`](07_quality/30_critical_gates.md) にある。検査項目に矛盾があれば `07_quality/30_critical_gates.md` を正本として採用する。
+
 ---
 
 ## Critical Gates（全て pass 必須 / 1 つでも失敗で停止）

@@ -69,12 +69,14 @@ owner: 04_archetypes
 ## 関連 contract / quality
 ```
 
-## Common Core（全 archetype が必ず持つ）
+## Common Core（全 archetype が必ず持つ 9 entries）
+
+**9 entries = 2 root files (README.md, SPOKE.yml) + 7 root directories**。README.md / SPOKE.yml は root file であり root ではないため、「9 root」とは呼ばない。
 
 ```text
 {target-repo}/
-├── README.md
-├── SPOKE.yml
+├── README.md             # root file
+├── SPOKE.yml             # root file
 ├── 00_foundation/
 ├── 20_workspace/
 ├── 21_outputs/
@@ -130,7 +132,7 @@ extension は archetype を**知らない**。archetype が extension を depend
 ## 最低 acceptance
 
 - archetype の定義（Common Core + Modules + Workflow + Surface 範囲）が明確
-- Common Core の 9 root が列挙されている
+- Common Core の 9 entries（2 root files + 7 root directories）が列挙されている
 - Optional Module 一覧がある
 - archetype と extension の一方向関係が明示されている
 
@@ -138,7 +140,7 @@ extension は archetype を**知らない**。archetype が extension を depend
 
 - archetype が extension を変更しようとした（一方向の逆）
 - 新 archetype が `_new_archetype_template/` を通らず追加された
-- Common Core から root が欠けた
+- Common Core 9 entries のいずれかが欠けた
 
 ## 関連ファイル
 

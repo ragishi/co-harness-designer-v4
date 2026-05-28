@@ -3,7 +3,8 @@ id: read_set.companyos_repo_design.v1
 status: active
 owner: 05_read_sets
 target_archetypes:
-  - any (CompanyOS 接続 repo を設計するときの共通入口)
+  - common_entry
+note: "archetype 選定前の共通入口。scaffold / export 実行前には必ず具体 archetype を 04_archetypes/repo/{selected}.md から選び、その read_set へ移行する。"
 ---
 
 # companyos_repo_design_read_set.md
@@ -29,6 +30,14 @@ CompanyOS に接続できる target repo を設計・生成・レビューする
 - `.companyos/` interface の設計
 - target repo の SPOKE.yml と CLAUDE.md の雛形作成
 - target repo の MVP 構造のレビュー
+
+## `target_archetypes: common_entry` について（例外扱い）
+
+`README.md` の止める条件には「archetype を絞らない read_set は止める」とあるが、この read_set だけは **archetype 選定前の共通入口**として例外扱いする。
+
+- 共通入口 = `common_entry` の唯一の使い道
+- scaffold / export に進む前には、必ず `04_archetypes/repo/{selected}.md` を読み、archetype 固有 read_set（後段追加予定）に移行する
+- 「とりあえず全部読む」の read_set はこれ以外に作らない
 
 ## 読む順番
 
