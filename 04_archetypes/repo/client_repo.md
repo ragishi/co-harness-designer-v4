@@ -69,7 +69,7 @@ CompanyOS UI 上では、案件ごとの進行 status / 次のアクション / 
 
 ```text
 {client-repo}/
-├── Common Core 9 root（10_repo_contract.md 参照）
+├── Common Core 9 entries（10_repo_contract.md 参照）
 └── archetype 固有：
     ├── 02_workflows/
     │   ├── client_workflow.md
@@ -97,7 +97,7 @@ CompanyOS UI 上では、案件ごとの進行 status / 次のアクション / 
 
 ## 最低 acceptance
 
-- Common Core 9 root（+ archetype 固有 root）すべて存在
+- Common Core 9 entries（+ archetype 固有 root）すべて存在
 - `10_clients/{slug}/meta.md` が `contract.markdown.v1` 準拠
 - `.companyos/surfaces/repo_card.surface.md` に案件カード surface あり
 - 必須 module（client_ops + project_management）が `SPOKE.yml` に宣言
