@@ -124,6 +124,38 @@ supporting (10/11/21/90):
   + proposals/mnp_surface_pack/(README + 5 files + feedback)
 ```
 
+### MVP 適用準備として追加済み（PR #1 / #2 / #3 / #4 の現状反映）
+
+MVP 範囲内で、運用前の整合修正・pilot 設計ファイル・preflight 強化として以下が追加された。**MVP boundaries の拡張ではなく、MVP 適用準備として扱う**：
+
+```text
+02_contracts/
+  + 60_writeback_contract.md  (PR #1 で planned stub として追加、
+                              MVP 中は実装しない、書き戻し禁止規約のみ)
+
+20_workspace/active/2026-05-note-production-pilot/
+  + 9 設計ファイル (PR #2 / #3 / #4)
+    00_request / 01_scope / 02_archetype_choice / 03_ssot_map
+    04_directory_design / 05_contract_design / 06_surface_design
+    07_quality_plan / 08_handoff
+  + README.md  (PR #4 で pilot 入口として追加)
+
+08_handoff.md 内の段階強化:
+  + Step 0.5 target repo 実体観察          (PR #3)
+  + Step 4 SPOKE.yml block 化方式           (PR #3)
+  + Phase 3 実行条件 section               (PR #4)
+  + Step 2 dry-run / tree 確認              (PR #4)
+  + Step 5 短縮チェック明示                (PR #4)
+
+CLAUDE.gate.md:
+  + Phase 3 Explicit Consent Gate           (PR #4)
+
+30_feedback/raw/2026-05.md:
+  + 各 PR の観測 entry をその都度 append    (PR #1〜#4)
+```
+
+これらは Phase 3 (target repo 適用) を**安全に開始するための準備**であり、Phase 3 自体や、その後の archetype 増設・writeback 詳細化・JSON 生成等の MVP 外要素は依然として後段。
+
 ### MVP で作らないもの（明示）
 
 ```text

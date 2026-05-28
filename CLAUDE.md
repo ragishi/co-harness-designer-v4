@@ -21,6 +21,11 @@ V4 produces target repos (note, client, SNS, YouTube, project mgmt, workflow ops
 6. **Do not create `05_context_packs/`**. Use `05_read_sets/`.
 7. **MNP is a Surface-only optional extension.** It lives in `02_contracts/80_*`, `06_build/exporters/mnp_*`, and `40_extensions/proposals/mnp_surface_pack/`. Never root-level.
 8. **Implement MVP first.** Do not over-build before observed need.
+9. **Do not apply archetype to any target repo without explicit user approval.**
+   - V4 produces target repos but never auto-applies. Phase 3 (target repo application) requires explicit instruction from the user.
+   - 「続きを進めて」「次へ」「OK」「進めてください」alone is **NOT** approval. Verify the **Phase 3 Explicit Consent Gate** in `CLAUDE.gate.md` Stop Conditions before touching any target repo (e.g., `co-note-production`).
+   - 明示承認の例: 「co-note-production に .companyos interface を適用して」「Phase 3 として co-note-production 側を実装して」「note-production-pilot を実行して」
+   - 迷ったら V4 (this repo) 内に留まる。詳細は `20_workspace/active/2026-05-note-production-pilot/08_handoff.md` の **Phase 3 実行条件** section.
 
 ---
 
