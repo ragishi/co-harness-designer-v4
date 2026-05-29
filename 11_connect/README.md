@@ -19,16 +19,16 @@ V3 の `11_connect/` 役割を継承しつつ、CompanyOS / Project Progress Rep
 - V4 内正本（思想・archetype）
 - CompanyOS 本体の所有物（hub 側）
 
-## 3. File Map（MVP 後段）
+## 3. File Map
 
-MVP では README + feedback のみ。実物は使いながら追加。
+MVP では接続方針（`00_connection_policy.md`）と CompanyOS 接続（`10_companyos_connection.md`）が active。個別 repo / hub の接続（`20`〜`70`）と `source_pins/` は実物が増えてから追加する。
 
 | path | 役割 | MVP |
 | --- | --- | :---: |
 | `README.md` | この入口 | ✓ |
 | `feedback.md` | 改善メモ | ✓ |
-| `00_connection_policy.md` | 接続方針 | — 後段 |
-| `10_companyos_connection.md` | hub 接続 | — 後段 |
+| `00_connection_policy.md` | 接続方針 | ✓ |
+| `10_companyos_connection.md` | hub 接続 | ✓ |
 | `20_project_progress_repo.md` | project_progress との接続 | — 後段 |
 | `30_owner_repos.md` | owner repo 接続 | — 後段 |
 | `40_prompt_repo.md` | prompt 接続 | — 後段 |
@@ -40,7 +40,7 @@ MVP では README + feedback のみ。実物は使いながら追加。
 ## 4. 読む順番
 
 1. `README.md`
-2. （実物が増えてから）`00_connection_policy.md` → `10_companyos_connection.md`
+2. `00_connection_policy.md` → `10_companyos_connection.md`
 
 ## 5. 最低 acceptance
 

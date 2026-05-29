@@ -34,12 +34,12 @@ MVP では README + feedback のみ。実物は使いながら追加。
 | `companyos_existing_notes.md` | CompanyOS の現状 | — 後段 |
 | `harness_designer_v3_notes.md` | V3 の継承元メモ | — 後段 |
 | `topology_studio_notes.md` | Topology Studio の現状 | — 後段 |
-| `source_pins.md` | URL / 取得日 | — 後段 |
+| `source_pins.md` | URL / 取得日 | ✓ |
 
 ## 4. 読む順番
 
 1. `README.md`
-2. （実物が増えてから）`source_pins.md`
+2. `source_pins.md`（参照元の URL / 取得日）
 
 ## 5. 最低 acceptance
 
