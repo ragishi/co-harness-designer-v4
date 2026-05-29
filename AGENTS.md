@@ -10,6 +10,6 @@ Codex and other agents follow the same protocol as Claude Code.
 2. `CLAUDE.gate.md` — pre-completion checks
 3. `README.md` — V4 overall picture
 
-## Note on symlink
+## Why a pointer, not a symlink
 
-Some environments do not handle markdown symlinks well. This file is therefore a **pointer file**, not a symlink. The canonical content lives in `CLAUDE.md`. Do not edit `AGENTS.md` to add agent-specific content — keep the protocol single-sourced in `CLAUDE.md`.
+Markdown symlinks are not portable across all environments (Windows / some CI), so this is a **pointer**, not a symlink to `CLAUDE.md`. The protocol is single-sourced in `CLAUDE.md`; keep `AGENTS.md` pointer-only and never add agent-specific rules or command catalogs here.
