@@ -168,10 +168,11 @@ CLAUDE.gate.md:
 × installed/ extensions
 × 全 quality scoring の実装
 × workflow registry（後段 phase）
-× 09_v3_to_v4_mapping.md（後段 phase）
 ```
 
 MVP 外を作りたくなったら、まず `30_feedback/raw/` に欲求として append。3 回再発で `31_learning/` 昇格を検討。
+
+> **更新（DRR trigger）**: `09_v3_to_v4_mapping.md` は当初「後段 phase」として MVP 外だったが、能動的な V3 → V4 governance transfer task（V3 継承を実際に説明する必要）が file 自身の active 化条件に合致したため active 化した（→ `09_v3_to_v4_mapping.md`）。他の上記項目は据え置き。
 
 ## 関連ファイル
 

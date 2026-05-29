@@ -1,5 +1,7 @@
 # CLAUDE.md — co-harness-designer-v4 起動 router
 
+> この file は毎 session 読まれる **実行プロトコルの正本**。全タスクで守る protocol と V4 固有の最小ルールだけを置く。詳細仕様は所有 root に置き、ここに複製しない（委譲先は末尾「このファイルについて」）。Codex など他 agent は `AGENTS.md`（→ 本 file への pointer）経由で同じ契約を読む。
+
 ## Role
 
 You are the implementation assistant for **co-harness-designer-v4**.
@@ -77,22 +79,58 @@ V4 produces target repos (note, client, SNS, YouTube, project mgmt, workflow ops
 
 ### Phase 1: Observe（必要十分に状況を掴む）
 
-対象の layer / archetype / read_set を判定し、必要な read set だけを読む。`05_read_sets/` の該当 set に従う。読みすぎずに、目的達成に必要な現状理解を揃える。
+対象の layer / archetype / read_set を判定し、必要な read set だけを読む。`05_read_sets/` の該当 set に従う。対象 root の役割・既存 `feedback.md`・最新 git 状態・参照 repo との差分も見る。読みすぎて遅くしないが、根拠なしに推測しない。
 
 ### Phase 2: Think（目的から逆算して設計する）
 
-表層対応ではなく、背景意図・成功条件・制約・影響範囲から最適な進め方を決める。中〜高複雑度では plan と差分を先に固定する。
+表層対応ではなく、背景意図・成功条件・制約・影響範囲から最適な進め方を決める。中〜高複雑度では plan と差分を先に固定する。順次実行・並列実行・Skill / SubAgent 活用は、品質・速度・確実性の合計が最大になる方法を選ぶ。
 
 ### Phase 3: Act（品質を維持して完遂する）
 
-Think で決めた方針に沿って進める。途中で前提が崩れたら理由と差分を明示して計画を更新する。
+Think で決めた方針に沿って進める。途中で前提が崩れたら理由と差分を明示して計画を更新する。部分最適に寄らず、16 root 全体・target repo への継承・将来の運用負荷まで見て判断する。止まる場合は、事実・原因・進捗・次の選択肢を短く報告する。
 
 ### Phase 4: Learn（再利用できる学びを残す）
 
-実行後は、適切な `feedback.md` に記録する。tier 直下の `feedback.md` がその tier の改善ログ、横断的なものは `30_feedback/raw/{YYYY-MM}.md`。
+実行後は、適切な `feedback.md` に記録する。tier 直下の `feedback.md` がその tier の改善ログ、横断的なものは `30_feedback/raw/{YYYY-MM}.md`。記録は必要十分に留め、個別対応で終わる内容を過剰に上位ルール化しない。昇格は `31_learning/` の 4-AND gate（再発 ≥ 3 / 冷却 ≥ 7 日 / grader / boundary）経由。
+
+---
+
+## 出力・完遂・Git
+
+- **完遂義務**: 依頼の成功条件を満たすまで自律的に進める。中断時は事実 / 原因 / 進捗 / 次の選択肢を短く出す。
+- **Git**: `main` 直コミット禁止。作業ブランチを切り、stage 前に差分を確認し、無関係な変更を混ぜず、force push しない。マージ済みブランチは再利用せず新ブランチを切る。
+- **品質確認**: 完了前検査は `CLAUDE.gate.md` を正本にする（実行可能 runner は持たない＝手動自己検査）。STUB success / 未実装を pass と誤認しない。
+- **最終出力**: 実行サマリー / 変更ファイル / 品質チェック / Git 情報（commit・branch・PR URL）/ 次アクションを短く出す。
+
+## NEVER / MUST（プロセス規律）
+
+9 Absolute Rules（構造の不変条件）とは別の、**作業プロセス**の規律。
+
+**MUST**
+
+- 編集前に対象 root の `README.md` と `feedback.md` を読む。
+- 新しい file / 概念の追加は DRR 5 question（`00_foundation/04_decision_rules.md`）を通す。
+- 完了前に `CLAUDE.gate.md` の Critical Gates を自己確認する。
+- 学びは適切な粒度で `feedback.md` / `30_feedback/raw/` に append する。
+
+**NEVER**
+
+- gate を飛ばして「完了」と報告する。
+- planned stub を勝手に実装コード化する。
+- 本 file を詳細仕様・command catalog で肥大化させる（詳細は所有 root へ委譲）。
+- runtime 設定（`.claude/` `.codex/` `.github/`）に V4 設計正本を置く。
 
 ---
 
 ## Before Completion
 
 `CLAUDE.gate.md` の Critical Gates をすべて自己確認する。Stop Conditions に該当したら停止して人間 review を求める。
+
+---
+
+## このファイルについて
+
+- **役割**: 毎 session 読む実行プロトコルの正本。詳細仕様の置き場ではない。
+- **行数予算**: 目安 ≤ 250 行 / hard cap ≤ 300 行。超えそうなら詳細を所有 root へ委譲する。
+- **Agent 入口**: `AGENTS.md` は本 file への pointer（移植性のため symlink にしない）。Codex / 他 agent も同じ契約を読む。
+- **詳細の委譲先**: V3 継承の詳細 → `00_foundation/09_v3_to_v4_mapping.md` ／ 品質詳細 → `07_quality/` ／ runtime tooling → `.claude/` `.codex/` `.github/`。
