@@ -31,6 +31,9 @@ Atlan でいう **コンテキストレイヤー相当**。作業ごとに、AI 
 | `youtube_ops_read_set.md` | YouTube 設計時 | — 後段 |
 | `sns_ops_read_set.md` | SNS 設計時 | — 後段 |
 | `topology_surface_read_set.md` | Topology Studio / Surface 設計時 | — 後段 |
+| `existing_repo_audit_read_set.md` | 既存 Repo 診断時（audit_existing_repo） | — 後段 |
+| `existing_repo_retrofit_read_set.md` | 既存 Repo 改修時（retrofit_existing_repo） | — 後段 |
+| `companyos_interface_apply_read_set.md` | `.companyos/` 接続口追加時（add_companyos_interface） | — 後段 |
 | `graph/` | dependency / repo / surface relation map | — 後段 |
 
 MVP では 1 read_set のみ。残りは使いながら追加。

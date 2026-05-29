@@ -15,6 +15,8 @@ V3 `21_outputs/` を継承。
 - migration_plans/ — V3 → V4 などの移行計画
 - handoff_packages/ — 別 Repo / 別 AI への引き継ぎ
 - quality_reports/ — 品質確認結果
+- audit_reports/ — 既存 Repo 診断レポート（audit_existing_repo）
+- retrofit_plans/ — 既存 Repo 改修計画（retrofit_existing_repo）
 
 ## 2. このrootが持たないもの
 
@@ -37,6 +39,8 @@ MVP では README + feedback のみ。実物は作業ごとに追加される。
 | `migration_plans/` | 移行計画 | 空 |
 | `handoff_packages/` | 引き継ぎ | 空 |
 | `quality_reports/` | 品質確認結果 | 空 |
+| `audit_reports/` | 既存 Repo 診断レポート | 空 |
+| `retrofit_plans/` | 既存 Repo 改修計画 | 空 |
 
 ## 4. 読む順番
 
@@ -45,7 +49,7 @@ MVP では README + feedback のみ。実物は作業ごとに追加される。
 
 ## 5. 最低 acceptance
 
-- 7 カテゴリの sub-dir が（空でも）役割が説明されている
+- 9 カテゴリの sub-dir が（空でも）役割が説明されている
 - 業務正本本体は置かれていない
 - 完成物には source_pin / 出自記録がある
 

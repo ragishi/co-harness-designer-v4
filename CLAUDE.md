@@ -75,6 +75,7 @@ V4 produces target repos (note, client, SNS, YouTube, project mgmt, workflow ops
 - **Prompt Fidelity** — prompt を 2 回読む。表面の作業指示を目的 / 背景意図 / 成功条件 / 制約 / 禁止事項 / 暗黙の期待へ翻訳する。
 - **入力補正 / 音声入力補完** — 音声入力、誤字、口語、言い直し、曖昧な略語は repo 文脈から補完する。不明なら確認する。
 - **Intent Lock** — 表層と背景意図を分け、「何を達成すれば成功か」を自分の言葉で固定する。
+- **Operation Mode Lock** — 計画・編集の前に、今回の作業モードを 5 つから分類する: `new_repo` / `audit_existing_repo` / `retrofit_existing_repo` / `add_companyos_interface` / `improve_v4_system`。mode が明示されるまで scaffold・編集・target repo 適用を始めない。詳細は `00_foundation/05_operating_modes.md`。
 - **Permission Lock** — `read-only` / `no-edit` / `調査だけ` は編集・commit・package 作成より優先する。
 
 ### Phase 1: Observe（必要十分に状況を掴む）

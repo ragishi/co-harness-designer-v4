@@ -23,6 +23,16 @@ slug: 2026-05-note-production-pilot
 
 ---
 
+## Operation Mode
+
+| field | value |
+| --- | --- |
+| primary mode | add_companyos_interface |
+| secondary mode | audit_existing_repo |
+| target repo | co-note-production |
+| edit permission | apply_after_explicit_phase_3_approval |
+| CompanyOS connection | design_then_apply |
+
 ## In scope
 
 ### Phase 2（本パッケージ）— V4 内

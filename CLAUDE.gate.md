@@ -29,6 +29,14 @@ Before completing any implementation in this repo, run this checklist against yo
 - [ ] MNP Contract Gate — only statuses / actions defined in contracts are used
 - [ ] MNP Writeback Gate — MNP edits do NOT directly modify business canonical markdown
 
+## Operating Mode Gates
+
+- [ ] operation_mode is classified before implementation/editing (`new_repo` / `audit_existing_repo` / `retrofit_existing_repo` / `add_companyos_interface` / `improve_v4_system`)
+- [ ] `audit_existing_repo` does not write to the target repo (read-only)
+- [ ] `retrofit_existing_repo` follows diagnose → diff → plan → approve → fix (no fix without plan + approval)
+- [ ] `add_companyos_interface` puts no business canonical content into `.companyos/`
+- [ ] `improve_v4_system` does not edit any target repo
+
 ---
 
 ## Advisory Gates（警告 / 改善余地）
