@@ -28,7 +28,7 @@ Atlan でいう **オントロジー相当**。V4 の中で扱う **概念・関
 | `README.md` | この入口 |
 | `feedback.md` | meaning_model への改善メモ |
 | `00_glossary.md` | 用語の入口 |
-| `01_plain_language_glossary.md` | 平易な言い換え集（planned stub） |
+| `01_plain_language_glossary.md` | 平易な言い換え集（初学者向け・pointer-only） |
 | `10_entities.md` | entity 定義（V4 の主要 16 概念） |
 | `20_relationships.md` | relationship 定義（planned stub） |
 | `30_taxonomies.md` | taxonomies（task_type / risk_level / archetype tag）（planned stub） |
