@@ -23,6 +23,7 @@ Atlan でいう **コンテキストレイヤー相当**。作業ごとに、AI 
 | --- | --- | :---: |
 | `README.md` | この入口 | ✓ |
 | `feedback.md` | 改善メモ | ✓ |
+| `00_read_set_policy.md` | read_set 共通方針（planned stub） | — 後段 |
 | `companyos_repo_design_read_set.md` | CompanyOS 接続 repo 設計時に読む順 | ✓ |
 | `project_progress_read_set.md` | project 管理 repo 設計時 | — 後段 |
 | `client_repo_read_set.md` | client repo 設計時 | — 後段 |

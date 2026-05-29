@@ -35,8 +35,19 @@ V4 が**どんな Repo を作るか**を定義する。
 | `repo/README.md` | repo archetype の入口 | ✓ |
 | `repo/note_production_repo.md` | note 制作 archetype | ✓ |
 | `repo/client_repo.md` | client 案件 archetype | ✓ |
-| `repo/{6 others}.md` | 残り 6 archetype: project_progress / sns_operations / youtube_ops / workflow_ops / prompt / design_system | — 後段 |
-| `workflows/` | workflow archetype | — 後段 |
+| `repo/project_progress_repo.md` | プロジェクト進捗管理 archetype | — 後段 |
+| `repo/sns_operations_repo.md` | SNS 運用 archetype | — 後段 |
+| `repo/youtube_ops_repo.md` | YouTube 運用 archetype | — 後段 |
+| `repo/workflow_ops_repo.md` | workflow 運用 archetype | — 後段 |
+| `repo/prompt_repo.md` | prompt 管理 archetype | — 後段 |
+| `repo/design_system_repo.md` | design system archetype | — 後段 |
+| `workflows/README.md` | workflow archetype の入口 | — 後段 |
+| `workflows/note_article_production.md` | note 記事制作 workflow 型 | — 後段 |
+| `workflows/client_workflow.md` | client 案件 workflow 型 | — 後段 |
+| `workflows/project_management.md` | project 進捗管理 workflow 型 | — 後段 |
+| `workflows/research_to_content.md` | リサーチ → content workflow 型 | — 後段 |
+| `workflows/sns_post_production.md` | SNS 投稿制作 workflow 型 | — 後段 |
+| `workflows/youtube_video_production.md` | YouTube 動画制作 workflow 型 | — 後段 |
 
 MVP では note と client の 2 archetype のみ。残りは使いながら追加。
 
