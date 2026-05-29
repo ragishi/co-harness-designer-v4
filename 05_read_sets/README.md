@@ -53,7 +53,7 @@ MVP では 1 read_set のみ。残りは使いながら追加。
 
 - read_set に entity / contract の本文が直書きされた
 - 「全部読む」のような無限の read_set ができた
-- archetype を絞らない read_set ができた
+- archetype を絞らない read_set ができた（**例外**: operation mode 用 read_set は `common_entry` を許可。ただし scaffold / retrofit / apply に進む前に具体 archetype または target repo を必ず確定する）
 
 ## 7. 関連 root
 

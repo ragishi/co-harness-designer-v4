@@ -44,9 +44,9 @@ CompanyOS UI に安全に投影する
 
 ---
 
-## 何を作る Repo か
+## 何を扱う目的別 Repo 型（archetype）か
 
-V4 が産む **archetype（目的別 Repo 型）**：
+V4 が扱う **archetype（目的別 Repo 型）**。新規作成の設計図であり、既存 repo の診断・改修の基準にもなる：
 
 - `note_production_repo` — note 記事制作
 - `client_repo` — クライアント案件管理
