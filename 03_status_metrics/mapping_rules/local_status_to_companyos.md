@@ -21,6 +21,18 @@ V4 の **local 8 enum** を **CompanyOS UI 側の 5 enum** へ変換する正本
 
 本 file active 化と同時に `10_workflow_status.md` の変換表をここへ移管し、`10_workflow_status.md` からはここへのポインターに差し替える。
 
+## 持つもの
+
+- local 8 enum → CompanyOS 汎用 5 enum の変換表の正本（後段で `10_workflow_status.md` から移管）
+- archetype 別上書きルール（後段）
+- 複数 status のマージ優先順位（後段）
+
+## 持たないもの
+
+- status enum 定義そのもの（→ `../10_workflow_status.md`）
+- Lens 固有の表示変換（色・アイコン・ソート順）（→ `workflow_to_lens.md`）
+- 変換処理の実装コード・CompanyOS API serialization の実装
+
 ---
 
 ## 変換表（`10_workflow_status.md` 正本と一致）

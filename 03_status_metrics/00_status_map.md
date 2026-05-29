@@ -50,6 +50,8 @@ note: "住所と役割確保のための stub。本格実装は後段。"
 | `60_readiness_scores.md` | 公開・実行準備スコア概念 | — 後段 |
 | `mapping_rules/README.md` | mapping_rules subroot 入口 | — 後段 |
 | `mapping_rules/local_status_to_companyos.md` | local → CompanyOS enum 変換 | — 後段 |
+| `mapping_rules/workflow_to_lens.md` | workflow status → CompanyOS Lens 変換 | — 後段 |
+| `mapping_rules/artifact_to_surface.md` | artifact status → Surface 表示変換 | — 後段 |
 
 凡例: ✓ = MVP active / — 後段 = planned stub（住所と役割確保済み）
 
