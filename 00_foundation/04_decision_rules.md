@@ -173,6 +173,8 @@ CLAUDE.gate.md:
 MVP 外を作りたくなったら、まず `30_feedback/raw/` に欲求として append。3 回再発で `31_learning/` 昇格を検討。
 
 > **更新（DRR trigger）**: `09_v3_to_v4_mapping.md` は当初「後段 phase」として MVP 外だったが、能動的な V3 → V4 governance transfer task（V3 継承を実際に説明する必要）が file 自身の active 化条件に合致したため active 化した（→ `09_v3_to_v4_mapping.md`）。他の上記項目は据え置き。
+>
+> **更新（DRR trigger / PR #11）**: `05_operating_modes.md` は当初 MVP 外（00_foundation の MVP は 00–04 のみ）だったが、依頼の作業種別（新規 / 診断 / 改修 / 接続追加 / V4 改善）を最初に分類しないと「診断依頼で書き換える」「V4 改善のはずが target repo へ飛ぶ」「接続追加で業務正本を動かす」等の mode 混同事故が起きる（PR #4 で Phase 3 mis-trigger として一度顕在化）。DRR 5 質問を pass（Q1 既存 file で表現不可 / Q2 mode 混同の再発あり / Q3 失敗パターン明確 / Q4 docs-only で cost<value / Q5 5 分類は運用粒度内）し、`improve_v4_system` の governance 追加として active 化した。Phase 3・archetype 増設・writeback 等の MVP 外要素は据え置き。
 
 ## 関連ファイル
 

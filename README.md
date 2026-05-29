@@ -8,6 +8,22 @@
 
 Harness Designer V4 は、CompanyOS に接続できる**目的別 Repo** を **Markdown-first** で設計・生成・検証・改善するための **Repository Harness Factory** である。
 
+V4 は新しい目的別 Repo を作るだけでなく、**既存 Repo の診断・改修・CompanyOS 接続追加・V4 自身の改善**も同格に扱う。依頼を受けたら、最初に作業モード（operation_mode）を決める（→ `00_foundation/05_operating_modes.md`）。
+
+```text
+依頼を受ける
+  ↓
+operation_mode を決める
+  ↓
+新規Repo設計 / 既存Repo診断 / 既存Repo改修 / CompanyOS接続追加 / V4自身の改善
+  ↓
+mode 別の read_set を読み、20_workspace で設計し、必要なら 21_outputs へ出す
+  ↓
+target repo を触る場合は明示承認のみ → 30_feedback へ戻す
+```
+
+作る対象と価値の流れ:
+
 ```text
 目的別 Repo を作る
   ↓

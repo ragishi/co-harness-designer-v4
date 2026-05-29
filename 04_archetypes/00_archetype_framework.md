@@ -29,7 +29,16 @@ Archetype
 Common Core + Required Modules + Recommended Modules + Forbidden Modules + Quality Profile
 ```
 
-V4 が**新しい target repo を産むときの設計図**。
+V4 が **新しい target repo を産むときの設計図**であり、**既存 target repo を診断・改修するときの基準**でもある。
+
+## archetype の 2 つの使い方
+
+1. **新規 Repo 設計**（`new_repo`）
+   - まだ存在しない target repo を作るための設計図として使う。
+2. **既存 Repo 診断・改修**（`audit_existing_repo` / `retrofit_existing_repo`）
+   - 既存 target repo が、その目的に対して十分な構造・品質・CompanyOS 接続口を持っているかを確認する基準として使う。
+
+→ 作業モードの定義は `../00_foundation/05_operating_modes.md`。
 
 ## archetype の構成
 
@@ -132,6 +141,7 @@ extension は archetype を**知らない**。archetype が extension を depend
 ## 最低 acceptance
 
 - archetype の定義（Common Core + Modules + Workflow + Surface 範囲）が明確
+- archetype が新規設計の設計図かつ既存診断・改修の基準であることが明示されている
 - Common Core の 9 entries（2 root files + 7 root directories）が列挙されている
 - Optional Module 一覧がある
 - archetype と extension の一方向関係が明示されている

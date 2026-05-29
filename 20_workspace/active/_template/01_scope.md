@@ -21,6 +21,15 @@ slug: "{YYYY-MM-{slug}}"
 - 実装方針
 - archetype 選定（→ `02_archetype_choice.md`）
 
+## Operation Mode
+
+| field | value |
+| --- | --- |
+| mode | new_repo / audit_existing_repo / retrofit_existing_repo / add_companyos_interface / improve_v4_system |
+| target repo |  |
+| edit permission | read_only / design_only / apply_after_explicit_approval |
+| CompanyOS connection | none / design_only / apply |
+
 ## In Scope
 
 - 
@@ -41,12 +50,14 @@ slug: "{YYYY-MM-{slug}}"
 
 ## 最低 acceptance
 
+- operation_mode が明記されている
 - in / out が明確
 - 影響範囲が一覧されている
 - 関連 read_set が指定されている
 
 ## 止める条件
 
+- operation_mode が未定義のまま in/out が書かれている
 - in が爆発的に広がっている
 - out が空（= 何でもやる）になっている
 

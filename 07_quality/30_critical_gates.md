@@ -56,6 +56,18 @@ V3 の Critical Gate 思想を継承。
 | **Feedback Loop Gate** | 主要 root に `feedback.md` がない（V4 では全主要 root 必須） |
 | **V3 not Modified Gate** | 既存の `co-harness-design-v3` リポジトリを書き換えようとしている |
 
+## Operating Mode Gate
+
+`../00_foundation/05_operating_modes.md` の作業モード規律を守らせる gate。
+
+| Gate | 止める条件 |
+| --- | --- |
+| **Operation Mode Gate** | operation_mode が未定義のまま実装・編集・scaffold 適用に進んでいる |
+| **Audit Read-only Gate** | `audit_existing_repo` なのに target repo へ書き込んでいる |
+| **Retrofit Planning Gate** | `retrofit_existing_repo` で診断・差分・計画・承認なしに修正している |
+| **CompanyOS Interface Scope Gate** | `add_companyos_interface` で業務正本を `.companyos/` に入れている |
+| **V4-only Work Gate** | `improve_v4_system` なのに target repo を編集している |
+
 ## Gate の運用
 
 ```text
@@ -68,6 +80,7 @@ V3 の Critical Gate 思想を継承。
 ## 関連ファイル
 
 - `10_common_quality.md`
+- `../00_foundation/05_operating_modes.md`
 - `../02_contracts/`
 - `../06_build/scaffolds/companyos_interface/`
 - `../00_foundation/04_decision_rules.md`
@@ -75,7 +88,7 @@ V3 の Critical Gate 思想を継承。
 
 ## 最低 acceptance
 
-- 共通 + MNP + V3 継承の全 critical gate が表で読める
+- 共通 + MNP + V3 継承 + Operating Mode の全 critical gate が表で読める
 - 各 gate に「止める条件」が明示されている
 - AND 運用が明示されている
 
