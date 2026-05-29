@@ -36,12 +36,13 @@ V4 produces target repos (note, client, SNS, YouTube, project mgmt, workflow ops
 1. `README.md` — V4 全体像
 2. `00_foundation/README.md` — 憲法 root の地図
 3. `00_foundation/00_purpose.md` — V4 の目的
-4. `00_foundation/02_ssot_authority_map.md` — 3 所有者の権限地図
-5. `00_foundation/03_format_and_ui_policy.md` — 形式ポリシー
-6. `04_archetypes/README.md` — V4 の中核
-7. `02_contracts/README.md` — 連携の約束
-8. `07_quality/README.md` — 品質ゲート
-9. `CLAUDE.gate.md` — 完了前検査
+4. `00_foundation/05_operating_modes.md` — 作業モード（依頼を最初に分類）
+5. `00_foundation/02_ssot_authority_map.md` — 3 所有者の権限地図
+6. `00_foundation/03_format_and_ui_policy.md` — 形式ポリシー
+7. `04_archetypes/README.md` — V4 の中核
+8. `02_contracts/README.md` — 連携の約束
+9. `07_quality/README.md` — 品質ゲート
+10. `CLAUDE.gate.md` — 完了前検査
 
 ---
 

@@ -26,7 +26,7 @@ V3 `21_outputs/` を継承。
 
 ## 3. File Map（MVP）
 
-MVP では README + feedback のみ。実物は作業ごとに追加される。
+MVP では実成果物本体はまだ置かない。各カテゴリの住所（sub-dir）と README は用意し、実物は作業ごとに追加される。
 
 | path | 役割 | MVP |
 | --- | --- | :---: |

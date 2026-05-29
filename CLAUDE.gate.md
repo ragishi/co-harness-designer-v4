@@ -18,7 +18,7 @@ Before completing any implementation in this repo, run this checklist against yo
 - [ ] `30_feedback/` and `31_learning/` are separate roots（V3 継承）
 - [ ] MNP is not a top-level root
 - [ ] MNP files exist only under `02_contracts/80_*`, `06_build/exporters/mnp_*`, and `40_extensions/proposals/mnp_surface_pack/`
-- [ ] MVP scope is not exceeded (only files declared in MVP plan)
+- [ ] MVP scope is not exceeded without a DRR / MVP-boundary record (`00_foundation/04_decision_rules.md`)
 - [ ] `.companyos/` interface is documented as **scaffold**, not used as canonical store
 
 ## MNP-related Critical Gates
